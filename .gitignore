@@ -1,0 +1,3 @@
+# Ignore raw heavy SQLite DB (keep Parquet and JSONL for high-speed AI analytics)
+database/speeches.db
+database/*.db-journal
