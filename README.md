@@ -1,79 +1,54 @@
-# 📊 Khamenei Speeches Processed AI Datasets (Parquet, JSONL, SQLite FTS5)
-### High-Performance Structured Datasets for AI, NLP & RAG / مجموعه‌داده‌های استاندارد هوش مصنوعی، متن‌کاوی و RAG
+# 📊 Ayatollah Khamenei Speeches Processed AI Datasets (1979–2026)
+### High-Performance Columnar, Streaming & Search Datasets / مجموعه‌داده‌های پردازش‌شده هوش مصنوعی، خطوط RAG و پردازش زبان طبیعی
 
-[![Format: Parquet](https://img.shields.io/badge/Format-Parquet-orange.svg)](https://github.com/mostafao-alavi/khamenei-speeches-datasets)
-[![Format: JSONL](https://img.shields.io/badge/Format-JSONL-yellow.svg)](https://github.com/mostafao-alavi/khamenei-speeches-datasets)
+[![Format: Parquet](https://img.shields.io/badge/Format-Parquet_Snappy-orange.svg)](https://github.com/mostafao-alavi/khamenei-speeches-datasets)
+[![Format: JSONL](https://img.shields.io/badge/Format-JSONL_Streaming-yellow.svg)](https://github.com/mostafao-alavi/khamenei-speeches-datasets)
 [![Database: SQLite_FTS5](https://img.shields.io/badge/Database-SQLite_FTS5-blue.svg)](https://github.com/mostafao-alavi/khamenei-speeches-datasets)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
-## 🌐 Ecosystem Repositories / ریپازیتوری‌های سه‌گانه پروژه
-| Repository | Description | Link |
-| :--- | :--- | :--- |
-| 📂 **`khamenei-speeches-data`** | آرشیو درختی متن کامل سخنرانی‌ها به تفکیک سال و ماه (Markdown & PDF) | [مشاهده ریپو](https://github.com/mostafao-alavi/khamenei-speeches-data) |
-| 📊 **`khamenei-speeches-datasets`** | دیتاست‌های آماده هوش مصنوعی و تحلیل داده (Parquet, JSONL, SQLite FTS5) | [مشاهده ریپو](https://github.com/mostafao-alavi/khamenei-speeches-datasets) |
-| ⚙️ **`khamenei-speeches-tools`** | ابزارها و کدهای خزشگر هوشمند، ممیزی، حذف تکراری‌ها و خط لوله استخراج | [مشاهده ریپو](https://github.com/mostafao-alavi/khamenei-speeches-tools) |
+## 🌐 Project Ecosystem / اکوسیستم مخازن سه‌گانه
+| Repository | Role | Content | Link |
+| :--- | :--- | :--- | :--- |
+| 📂 **`khamenei-speeches-data`** | **Primary Source Archive** | آرشیو درختی متن کامل سخنرانی‌ها به تفکیک سال و ماه (Markdown, JSON, HTML, PDF) | [GitHub](https://github.com/mostafao-alavi/khamenei-speeches-data) |
+| 📊 **`khamenei-speeches-datasets`** | **AI & Analytics Datasets** | دیتاست‌های تجمیعی هوش مصنوعی (Parquet, JSONL, SQLite FTS5) برای RAG و LLM | [GitHub](https://github.com/mostafao-alavi/khamenei-speeches-datasets) |
+| ⚙️ **`khamenei-speeches-tools`** | **Engineering & Crawler** | موتور دانلودر ضد مسدودی، ممیزی داده‌ها، و خط لوله استخراج و پاکسازی | [GitHub](https://github.com/mostafao-alavi/khamenei-speeches-tools) |
 
 ---
 
-## 🌍 Multilingual Navigation
-- [🇮🇷 فارسی (Persian)](#فارسی)
-- [🇬🇧 English](#english)
-- [🇸🇦 العربية (Arabic)](#العربية)
-- [🇨🇳 中文 (Chinese)](#中文)
-- [🇫🇷 Français (French)](#français)
-- [🇹🇷 Türkçe (Turkish)](#türkçe)
-- [🇷🇺 Русский (Russian)](#русский)
+## 🌍 Complete Multilingual Documentation / مستندات کامل چندزبانه
+برای مطالعه مستندات جامع به زبان‌های مختلف، از پیوندهای زیر استفاده کنید:
+- 🇮🇷 **[فارسی (Persian)](docs/README.fa.md)** - نسخه کامل راهنمای فنی و هوش مصنوعی
+- 🇬🇧 **[English (Default)](docs/README.en.md)** - Comprehensive AI & Data Science Documentation
+- 🇸🇦 **[العربية (Arabic)](docs/README.ar.md)** - دليل مجموعات البيانات للذكاء الاصطناعي
+- 🇨🇳 **[中文 (Chinese)](docs/README.zh.md)** - 人工智能与自然语言处理数据集指南
+- 🇫🇷 **[Français (French)](docs/README.fr.md)** - Guide des Jeux de Données IA et NLP
+- 🇹🇷 **[Türkçe (Turkish)](docs/README.tr.md)** - Yapay Zeka ve NLP Veri Kümeleri Rehberi
+- 🇷🇺 **[Русский (Russian)](docs/README.ru.md)** - Руководство по Датасетам для ИИ и NLP
 
 ---
 
-<a name="فارسی"></a>
-## 🇮🇷 فارسی
-### درباره دیتاست‌ها
-این مخزن میزبان فایل‌های خروجی و پردازش‌شده سخنرانی‌های حضرت آیت‌الله خامنه‌ای در قالب‌های بهینه و استاندارد بین‌المللی برای کاربردهای **هوش مصنوعی (AI)، خط‌لوله‌های RAG، پیش‌آموزش و فاین‌تیون مدل‌های زبانی (LLM Fine-Tuning) و پردازش زبان طبیعی (NLP)** است.
+## ⚡ Quick-Start Code Samples
 
-### فرمت‌های ارائه‌شده
-1. **`exports/khamenei_speeches_corpus.parquet`**:
-   - حجم تقریبی: ۱۳.۶ مگابایت (فشرده‌سازی ستونی Snappy)
-   - مناسب برای بارگذاری فوق‌سریع در Pandas، Polars، PyArrow، DuckDB و Spark.
-2. **`exports/khamenei_speeches_corpus.jsonl`**:
-   - مناسب برای پایپ‌لاین‌های HuggingFace Datasets، LangChain، LlamaIndex و وکتور دیتابیس‌ها.
-3. **`database/speeches_fts.db`**:
-   - پایگاه داده سبک SQLite همراه با جدول جستجوی تمام‌متن مجهز به توکنایزر یونیکد (FTS5 unicode61).
-
-### نمونه کد استفاده در پایتون (Python)
+### Python (Pandas & DuckDB with Parquet)
 ```python
 import pandas as pd
 
-# خواندن مستقیم دیتاست پارکت
+# Load high-performance Parquet file (13.6 MB)
 df = pd.read_parquet("exports/khamenei_speeches_corpus.parquet")
-print(f"تعداد سخنرانی‌ها: {len(df)}")
-print(df[["solar_date", "title", "word_count"]].head())
+print(f"Loaded {len(df):,} speeches spanning {df['year'].min()} to {df['year'].max()}.")
+print(f"Total tokens: {df['word_count'].sum():,}")
 ```
 
----
+### Full-Text Search with SQLite FTS5
+```python
+import sqlite3
 
-<a name="english"></a>
-## 🇬🇧 English
-### Overview
-This repository provides production-ready structured datasets containing over 1,066 full official speeches (3.15M+ words) from 1979 to 2026 for AI, Retrieval-Augmented Generation (RAG), and NLP workflows.
-
-### Available Formats
-- **Parquet (`exports/khamenei_speeches_corpus.parquet`)**: Columnar storage for rapid analytical queries.
-- **JSON Lines (`exports/khamenei_speeches_corpus.jsonl`)**: Line-by-line format for LLM fine-tuning and embeddings.
-- **SQLite FTS5 (`database/speeches_fts.db`)**: Indexed full-text search database.
-
----
-
-<a name="العربية"></a>
-## 🇸🇦 العربية
-### نظرة عامة
-يوفر هذا المستودع مجموعات بيانات مهيكلة وعالية الأداء لخطابات وبيانات السيد علي الخامنئي بتنسيقات متطورة (Parquet و JSONL و SQLite) المجهزة خصيصاً لتطبيقات الذكاء الاصطناعي وخطوط أنابيب RAG وتدريب النماذج اللغوية الكبيرة.
-
----
-
-<a name="中文"></a>
-## 🇨🇳 中文
-### 概述
-本仓库提供阿亚图拉·赛义德·阿里·哈梅内伊演讲的高性能结构化数据集（Parquet、JSONL 和 SQLite FTS5），专为人工智能、RAG 和 NLP 研究优化。
+conn = sqlite3.connect("database/speeches_fts.db")
+c = conn.cursor()
+query = "استقلال AND آزادی"
+c.execute("SELECT solar_date, title, snippet(speeches_fts, 2, '<b>', '</b>', '...', 15) FROM speeches_fts WHERE content MATCH ? LIMIT 5", (query,))
+for row in c.fetchall():
+    print(f"[{row[0]}] {row[1]}\n{row[2]}\n")
+```
